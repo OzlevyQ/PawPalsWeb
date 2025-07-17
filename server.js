@@ -3,26 +3,26 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
-const webSocketService = require('./src/utils/websocketService');
+const webSocketService = require('./src/utils/websocketService.js');
 
 // Load environment variables
 dotenv.config();
 
 // Import routes
-const authRoutes = require('./src/routes/auth');
-const userRoutes = require('./src/routes/users');
-const gardenRoutes = require('./src/routes/gardens');
-const dogRoutes = require('./src/routes/dogs');
-const visitRoutes = require('./src/routes/visits');
-const reviewRoutes = require('./src/routes/reviews');
-const chatRoutes = require('./src/routes/chats');
-const eventRoutes = require('./src/routes/events');
-const notificationRoutes = require('./src/routes/notifications');
-const friendshipRoutes = require('./src/routes/friendships');
-const photoRoutes = require('./src/routes/photos');
-const adminRoutes = require('./src/routes/admin');
-const requestRoutes = require('./src/routes/requests');
-const gamificationRoutes = require('./src/routes/gamification');
+const authRoutes = require('./src/routes/auth.js');
+const userRoutes = require('./src/routes/users.js');
+const gardenRoutes = require('./src/routes/gardens.js');
+const dogRoutes = require('./src/routes/dogs.js');
+const visitRoutes = require('./src/routes/visits.js');
+const reviewRoutes = require('./src/routes/reviews.js');
+const chatRoutes = require('./src/routes/chats.js');
+const eventRoutes = require('./src/routes/events.js');
+const notificationRoutes = require('./src/routes/notifications.js');
+const friendshipRoutes = require('./src/routes/friendships.js');
+const photoRoutes = require('./src/routes/photos.js');
+const adminRoutes = require('./src/routes/admin.js');
+const requestRoutes = require('./src/routes/requests.js');
+const gamificationRoutes = require('./src/routes/gamification.js');
 
 const app = express();
 
@@ -151,7 +151,7 @@ app.use('/api/photos', photoRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/requests', requestRoutes);
 app.use('/api/gamification', gamificationRoutes);
-app.use('/api/dog-ratings', require('./src/routes/dogRatings'));
+app.use('/api/dog-ratings', require('./src/routes/dogRatings.js'));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
