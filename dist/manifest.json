@@ -1,0 +1,144 @@
+{
+  "name": "Pawradise - Dog Parks Community",
+  "short_name": "Pawradise",
+  "description": "Connect with fellow dog owners and discover the best dog parks in your area",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8b5cf6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["social", "lifestyle", "navigation"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/mobile-1.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "Dog park discovery"
+    },
+    {
+      "src": "/screenshots/mobile-2.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "Community features"
+    },
+    {
+      "src": "/screenshots/desktop-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Desktop experience"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Find Dog Parks",
+      "short_name": "Parks",
+      "description": "Discover dog parks near you",
+      "url": "/gardens",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "My Dogs",
+      "short_name": "Dogs",
+      "description": "Manage your dog profiles",
+      "url": "/my-dogs",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "short_name": "Events",
+      "description": "View upcoming dog events",
+      "url": "/events",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Notifications",
+      "short_name": "Notifications",
+      "description": "Check your notifications",
+      "url": "/notifications",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "32x32"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "gcm_sender_id": "YOUR_FCM_SENDER_ID_HERE",
+  "notification_preferences": {
+    "friend_requests": true,
+    "event_invitations": true,
+    "garden_updates": true,
+    "system_notifications": true
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+pawradise",
+      "url": "/?action=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "images",
+          "accept": ["image/*"]
+        }
+      ]
+    }
+  },
+  "file_handlers": [
+    {
+      "action": "/share",
+      "accept": {
+        "image/*": [".jpg", ".jpeg", ".png", ".gif", ".webp"]
+      }
+    }
+  ]
+}
