@@ -1,6 +1,6 @@
 {
-  "name": "Pawradise - Dog Parks Community",
-  "short_name": "Pawradise",
+  "name": "PawPals  - Dog Parks Community",
+  "short_name": "PawPals",
   "description": "Connect with fellow dog owners and discover the best dog parks in your area",
   "start_url": "/",
   "display": "standalone",
@@ -113,7 +113,7 @@
   },
   "protocol_handlers": [
     {
-      "protocol": "web+pawradise",
+      "protocol": "web+pawpals",
       "url": "/?action=%s"
     }
   ],
