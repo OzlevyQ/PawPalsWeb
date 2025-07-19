@@ -30,6 +30,7 @@ class NotificationService {
         const sent = webSocketService.sendNotificationToUser(userId, notification);
         console.log(`WebSocket notification sent to user ${userId}: ${sent ? 'SUCCESS' : 'FAILED'}`);
       }
+
       
       return notification;
     } catch (error) {

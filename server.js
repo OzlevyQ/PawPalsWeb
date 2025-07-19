@@ -23,6 +23,7 @@ const photoRoutes = require('./src/routes/photos.js');
 const adminRoutes = require('./src/routes/admin.js');
 const requestRoutes = require('./src/routes/requests.js');
 const gamificationRoutes = require('./src/routes/gamification.js');
+const dogJournalRoutes = require('./src/routes/dogJournal.js');
 
 const app = express();
 
@@ -67,6 +68,9 @@ app.use(cors({
 }));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+
+// Serve uploaded files
+app.use('/uploads', express.static('uploads'));
 
 // Serve static files from the React app build
 if (process.env.NODE_ENV === 'production') {
@@ -152,6 +156,7 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/requests', requestRoutes);
 app.use('/api/gamification', gamificationRoutes);
 app.use('/api/dog-ratings', require('./src/routes/dogRatings.js'));
+app.use('/api/dog-journal', dogJournalRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
