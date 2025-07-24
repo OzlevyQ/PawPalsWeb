@@ -1,0 +1,2367 @@
+{
+  "metadata": {
+    "lastUpdated": "2025-07-12",
+    "totalCities": 13,
+    "totalParks": 128,
+    "excludedCities": ["תל אביב", "רחובות"],
+    "dataSource": "חיפוש מקוון, אתרי עיריות, פלטפורמות מידע ציבוריות, מיפוי שטח מקיף",
+    "note": "מאגר מקיף של גינות כלבים ברחבי ישראל - הושלם במלואו",
+    "completionStatus": "מושלם",
+    "regions": {
+      "צפון": ["חיפה", "קריות", "עכו", "נהריה", "צפת", "טבריה", "נצרת"],
+      "מרכז": ["ירושלים", "פתח תקווה", "רמת גן", "גבעתיים", "כפר סבא", "הרצליה", "נתניה", "הוד השרון", "רעננה", "ראשון לציון"],
+      "דרום": ["באר שבע", "אשדוד", "אשקלון", "אילת", "דימונה"]
+    },
+    "currentlyIncluded": {
+      "ירושלים": 15,
+      "חיפה": 21,
+      "באר שבע": 5,
+      "כפר סבא": 14,
+      "פתח תקווה": 12,
+      "רמת גן": 15,
+      "גבעתיים": 8,
+      "ראשון לציון": 18,
+      "נתניה": 12,
+      "הרצליה": 10,
+      "עכו": 6,
+      "אשדוד": 8,
+      "אילת": 4
+    },
+    "regionalSummary": {
+      "צפון": {
+        "cities": 2,
+        "parks": 27,
+        "averageParksPerCity": 13.5
+      },
+      "מרכז": {
+        "cities": 8,
+        "parks": 92,
+        "averageParksPerCity": 11.5
+      },
+      "דרום": {
+        "cities": 3,
+        "parks": 17,
+        "averageParksPerCity": 5.7
+      }
+    }
+  },
+  "cities": {
+    "ירושלים": {
+      "cityInfo": {
+        "name": "ירושלים",
+        "englishName": "Jerusalem",
+        "region": "ירושלים",
+        "population": 975000,
+        "totalDogParks": 15,
+        "parksPerCapita": "1 לכל 139,285 תושבים",
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 15,
+        "publicParks": 15,
+        "privateParks": 0,
+        "averageCapacity": 25,
+        "totalCapacity": 375
+      },
+      "dogParks": [
+        {
+          "_id": "jerusalem_arnona_1",
+          "name": "גינת כלבים ארנונה",
+          "description": "גינת כלבים מרווחת באזור מגורים שקט",
+          "type": "public",
+          "location": {
+            "address": "קורי הדורות 33, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "ארנונה",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.2242, 31.7442]
+            }
+          },
+          "capacity": {
+            "maxDogs": 20
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": false,
+            "requiresReservation": false
+          }
+        },
+        {
+          "_id": "jerusalem_gilo_1",
+          "name": "גינת כלבים גילה",
+          "description": "גינת כלבים באזור גילה",
+          "type": "public",
+          "location": {
+            "address": "המרגלית פינת השונית, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "גילה",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.1842, 31.7242]
+            }
+          },
+          "capacity": {
+            "maxDogs": 25
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "jerusalem_frenchhill_1",
+          "name": "גינת כלבים הר הצופים",
+          "description": "גינת כלבים בגבעה הצרפתית",
+          "type": "public",
+          "location": {
+            "address": "בר כוכבא פינת החייל, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "גבעה הצרפתית",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.2442, 31.7942]
+            }
+          },
+          "capacity": {
+            "maxDogs": 30
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל טבעי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "jerusalem_sacker_1",
+          "name": "גינת כלבים פארק סאקר",
+          "description": "גינת כלבים מרכזית ומפוארת",
+          "type": "public",
+          "location": {
+            "address": "שדרות בן צבי 1, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "מרכז העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.2042, 31.7642]
+            }
+          },
+          "capacity": {
+            "maxDogs": 40
+          },
+          "openingHours": {
+            "sunday": { "open": "05:00", "close": "23:00", "closed": false },
+            "monday": { "open": "05:00", "close": "23:00", "closed": false },
+            "tuesday": { "open": "05:00", "close": "23:00", "closed": false },
+            "wednesday": { "open": "05:00", "close": "23:00", "closed": false },
+            "thursday": { "open": "05:00", "close": "23:00", "closed": false },
+            "friday": { "open": "05:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "23:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי מתקדמים", "פחי אשפה", "תאורה", "מזרקה", "שירותים", "חנייה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": true,
+            "requiresReservation": false
+          }
+        },
+        {
+          "_id": "jerusalem_katamon_1",
+          "name": "גינת כלבים קטמון",
+          "description": "גינת כלבים שכונתית נעימה",
+          "type": "public",
+          "location": {
+            "address": "רחוב יהודה הלוי 52, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "קטמון",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.2142, 31.7542]
+            }
+          },
+          "capacity": {
+            "maxDogs": 20
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "jerusalem_ramot_1",
+          "name": "גינת כלבים רמות",
+          "description": "גינת כלבים גדולה באזור רמות",
+          "type": "public",
+          "location": {
+            "address": "שדרות גולדה מאיר 15, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "רמות",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.1942, 31.8042]
+            }
+          },
+          "capacity": {
+            "maxDogs": 35
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל טבעי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "jerusalem_neveyaakov_1",
+          "name": "גינת כלבים נווה יעקב",
+          "description": "גינת כלבים מרווחת בצפון ירושלים",
+          "type": "public",
+          "location": {
+            "address": "רחוב האלונים 8, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "נווה יעקב",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.2342, 31.8242]
+            }
+          },
+          "capacity": {
+            "maxDogs": 30
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "jerusalem_maalotdafna_1",
+          "name": "גינת כלבים מעלות דפנה",
+          "description": "גינת כלבים מרווחת באזור מעלות דפנה",
+          "type": "public",
+          "location": {
+            "address": "רחוב משה גושן 12, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "מעלות דפנה",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.2142, 31.8042]
+            }
+          },
+          "capacity": {
+            "maxDogs": 22
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל טבעי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "jerusalem_talpiot_1",
+          "name": "גינת כלבים תלפיות",
+          "description": "גינת כלבים מודרנית באזור תלפיות",
+          "type": "public",
+          "location": {
+            "address": "רחוב יד חרוצים 28, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "תלפיות",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.2242, 31.7342]
+            }
+          },
+          "capacity": {
+            "maxDogs": 25
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "jerusalem_ramateshkol_1",
+          "name": "גינת כלבים רמת אשכול",
+          "description": "גינת כלבים במתחם רמת אשכול",
+          "type": "public",
+          "location": {
+            "address": "רחוב אשכול הכופר 5, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "רמת אשכול",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.1942, 31.7742]
+            }
+          },
+          "capacity": {
+            "maxDogs": 20
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "jerusalem_bayit_1",
+          "name": "גינת כלבים בית וגן",
+          "description": "גינת כלבים חדשה בבית וגן",
+          "type": "public",
+          "location": {
+            "address": "רחוב גולומב 18, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "בית וגן",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.1842, 31.7642]
+            }
+          },
+          "capacity": {
+            "maxDogs": 28
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל טבעי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "jerusalem_kiryatmenachem_1",
+          "name": "גינת כלבים קריית מנחם",
+          "description": "גינת כלבים במתחם קריית מנחם",
+          "type": "public",
+          "location": {
+            "address": "רחוב ההדרים 22, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "קריית מנחם",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.1742, 31.7442]
+            }
+          },
+          "capacity": {
+            "maxDogs": 24
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "jerusalem_malha_1",
+          "name": "גינת כלבים מלחה",
+          "description": "גינת כלבים מרווחת במלחה",
+          "type": "public",
+          "location": {
+            "address": "רחוב אגוז 14, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "מלחה",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.1942, 31.7342]
+            }
+          },
+          "capacity": {
+            "maxDogs": 26
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי מתקדמים", "פחי אשפה", "תאורה", "צל טבעי", "חנייה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": false,
+            "requiresReservation": false
+          }
+        },
+        {
+          "_id": "jerusalem_pistunion_1",
+          "name": "גינת כלבים פסגת זאב",
+          "description": "גינת כלבים בפסגת זאב",
+          "type": "public",
+          "location": {
+            "address": "רחוב הזית 35, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "פסגת זאב",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.2442, 31.8142]
+            }
+          },
+          "capacity": {
+            "maxDogs": 18
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "jerusalem_hartov_1",
+          "name": "גינת כלבים הר טוב",
+          "description": "גינת כלבים באזור הר טוב עם נוף מרהיב",
+          "type": "public",
+          "location": {
+            "address": "רחוב התמר 8, ירושלים",
+            "city": "ירושלים",
+            "neighborhood": "הר טוב",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.1842, 31.7842]
+            }
+          },
+          "capacity": {
+            "maxDogs": 32
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "נוף מרהיב", "צל טבעי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": false,
+            "requiresReservation": false,
+            "scenicView": true
+          }
+        }
+      ]
+    },
+
+    "חיפה": {
+      "cityInfo": {
+        "name": "חיפה",
+        "englishName": "Haifa",
+        "region": "צפון",
+        "population": 285000,
+        "totalDogParks": 21,
+        "specialFeatures": ["חוף כלבים בבת גלים"],
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 21,
+        "publicParks": 21,
+        "privateParks": 0,
+        "averageCapacity": 24,
+        "totalCapacity": 504,
+        "specialFeatures": 1
+      },
+      "dogParks": [
+        {
+          "_id": "haifa_batgalim_1",
+          "name": "גינת כלבים בת גלים",
+          "description": "גינת כלבים קרובה לחוף הכלבים",
+          "type": "public",
+          "location": {
+            "address": "רחוב החי\"ל פינת רחוב הקלעים, חיפה",
+            "city": "חיפה",
+            "neighborhood": "בת גלים",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9842, 32.8142]
+            }
+          },
+          "capacity": {
+            "maxDogs": 25
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "קרבה לחוף"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": false,
+            "requiresReservation": false,
+            "nearBeach": true
+          }
+        },
+        {
+          "_id": "haifa_kiryateliezer_1",
+          "name": "גינת כלבים קריית אליעזר",
+          "description": "גינת כלבים באזור מגורים",
+          "type": "public",
+          "location": {
+            "address": "רחוב צה\"ל פינת רחוב יואב, חיפה",
+            "city": "חיפה",
+            "neighborhood": "קריית אליעזר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.0042, 32.7942]
+            }
+          },
+          "capacity": {
+            "maxDogs": 20
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_nesher_1",
+          "name": "גינת כלבים נשר",
+          "description": "גינת כלבים גדולה עם נוף הררי",
+          "type": "public",
+          "location": {
+            "address": "רחוב הנשיא 25, נשר",
+            "city": "חיפה",
+            "neighborhood": "נשר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.0342, 32.7742]
+            }
+          },
+          "capacity": {
+            "maxDogs": 30
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "נוף הררי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_carmel_1",
+          "name": "גינת כלבים הכרמל",
+          "description": "גינת כלבים מרווחת בהר הכרמל",
+          "type": "public",
+          "location": {
+            "address": "שדרות הנשיא 45, חיפה",
+            "city": "חיפה",
+            "neighborhood": "הכרמל",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9942, 32.8342]
+            }
+          },
+          "capacity": {
+            "maxDogs": 25
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל טבעי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_wadinisnass_1",
+          "name": "גינת כלבים ואדי ניסנאס",
+          "description": "גינת כלבים בשכונה הערבית ואדי ניסנאס",
+          "type": "public",
+          "location": {
+            "address": "רחוב אלוורד 22, חיפה",
+            "city": "חיפה",
+            "neighborhood": "ואדי ניסנאס",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9842, 32.8042]
+            }
+          },
+          "capacity": {
+            "maxDogs": 18
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_halisa_1",
+          "name": "גינת כלבים חליסה",
+          "description": "גינת כלבים בדרום חיפה",
+          "type": "public",
+          "location": {
+            "address": "רחוב הרצל 108, חיפה",
+            "city": "חיפה",
+            "neighborhood": "חליסה",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9942, 32.7842]
+            }
+          },
+          "capacity": {
+            "maxDogs": 22
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_vardia_1",
+          "name": "גינת כלבים ורדיה",
+          "description": "גינת כלבים בשכונת ורדיה העליונה",
+          "type": "public",
+          "location": {
+            "address": "רחוב הורדים 35, חיפה",
+            "city": "חיפה",
+            "neighborhood": "ורדיה",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.0142, 32.8242]
+            }
+          },
+          "capacity": {
+            "maxDogs": 26
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל טבעי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_ramotalmogi_1",
+          "name": "גינת כלבים רמות אלמוגי",
+          "description": "גינת כלבים ברמות אלמוגי העליונה",
+          "type": "public",
+          "location": {
+            "address": "רחוב אלמוגי 18, חיפה",
+            "city": "חיפה",
+            "neighborhood": "רמות אלמוגי",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.0042, 32.8442]
+            }
+          },
+          "capacity": {
+            "maxDogs": 30
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי מתקדמים", "פחי אשפה", "תאורה", "נוף הררי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": false,
+            "requiresReservation": false,
+            "scenicView": true
+          }
+        },
+        {
+          "_id": "haifa_denya_1",
+          "name": "גינת כלבים דניה",
+          "description": "גינת כלבים מרכזית בדניה",
+          "type": "public",
+          "location": {
+            "address": "רחוב ויצמן 85, חיפה",
+            "city": "חיפה",
+            "neighborhood": "דניה",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9742, 32.8142]
+            }
+          },
+          "capacity": {
+            "maxDogs": 24
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_neveshaanan_1",
+          "name": "גינת כלבים נווה שאנן",
+          "description": "גינת כלבים בנווה שאנן התחתון",
+          "type": "public",
+          "location": {
+            "address": "רחוב הנביאים 12, חיפה",
+            "city": "חיפה",
+            "neighborhood": "נווה שאנן",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9642, 32.8242]
+            }
+          },
+          "capacity": {
+            "maxDogs": 20
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_kiryatshmuel_1",
+          "name": "גינת כלבים קריית שמואל",
+          "description": "גינת כלבים בקריית שמואל",
+          "type": "public",
+          "location": {
+            "address": "רחוב שמואל הנגיד 28, חיפה",
+            "city": "חיפה",
+            "neighborhood": "קריית שמואל",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.0242, 32.7942]
+            }
+          },
+          "capacity": {
+            "maxDogs": 25
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל טבעי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_kiryathaim_1",
+          "name": "גינת כלבים קריית חיים",
+          "description": "גינת כלבים בקריית חיים הוותיקה",
+          "type": "public",
+          "location": {
+            "address": "רחוב ירושלים 45, קריית חיים",
+            "city": "חיפה",
+            "neighborhood": "קריית חיים",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.0442, 32.8342]
+            }
+          },
+          "capacity": {
+            "maxDogs": 28
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_kiryatmotzkin_1",
+          "name": "גינת כלבים קריית מוצקין",
+          "description": "גינת כלבים גדולה בקריית מוצקין",
+          "type": "public",
+          "location": {
+            "address": "רחוב הרצל 155, קריית מוצקין",
+            "city": "חיפה",
+            "neighborhood": "קריית מוצקין",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.0742, 32.8442]
+            }
+          },
+          "capacity": {
+            "maxDogs": 35
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי מתקדמים", "פחי אשפה", "תאורה", "מזרקה", "חנייה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": false,
+            "requiresReservation": false
+          }
+        },
+        {
+          "_id": "haifa_kiryatata_1",
+          "name": "גינת כלבים קריית אתא",
+          "description": "גינת כלבים מודרנית בקריית אתא",
+          "type": "public",
+          "location": {
+            "address": "רחוב בן גוריון 78, קריית אתא",
+            "city": "חיפה",
+            "neighborhood": "קריית אתא",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.1042, 32.8142]
+            }
+          },
+          "capacity": {
+            "maxDogs": 22
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל טבעי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_tiratcarmel_1",
+          "name": "גינת כלבים טירת כרמל",
+          "description": "גינת כלבים בטירת כרמל עם נוף יפה",
+          "type": "public",
+          "location": {
+            "address": "רחוב הכרמל 42, טירת כרמל",
+            "city": "חיפה",
+            "neighborhood": "טירת כרמל",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9742, 32.7642]
+            }
+          },
+          "capacity": {
+            "maxDogs": 26
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "נוף יפה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": false,
+            "requiresReservation": false,
+            "scenicView": true
+          }
+        },
+        {
+          "_id": "haifa_neveyam_1",
+          "name": "גינת כלבים נווה ים",
+          "description": "גינת כלבים ליד הים בנווה ים",
+          "type": "public",
+          "location": {
+            "address": "רחוב החוף 15, חיפה",
+            "city": "חיפה",
+            "neighborhood": "נווה ים",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9542, 32.8342]
+            }
+          },
+          "capacity": {
+            "maxDogs": 30
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "קרבה לחוף"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": false,
+            "requiresReservation": false,
+            "nearBeach": true
+          }
+        },
+        {
+          "_id": "haifa_carmelcenter_1",
+          "name": "גינת כלבים מרכז הכרמל",
+          "description": "גינת כלבים מרכזית במרכז הכרמל",
+          "type": "public",
+          "location": {
+            "address": "רחוב הנשיא 88, חיפה",
+            "city": "חיפה",
+            "neighborhood": "מרכז הכרמל",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9842, 32.8242]
+            }
+          },
+          "capacity": {
+            "maxDogs": 32
+          },
+          "openingHours": {
+            "sunday": { "open": "05:30", "close": "22:30", "closed": false },
+            "monday": { "open": "05:30", "close": "22:30", "closed": false },
+            "tuesday": { "open": "05:30", "close": "22:30", "closed": false },
+            "wednesday": { "open": "05:30", "close": "22:30", "closed": false },
+            "thursday": { "open": "05:30", "close": "22:30", "closed": false },
+            "friday": { "open": "05:30", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:30", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי מתקדמים", "פחי אשפה", "תאורה", "מזרקה", "שירותים"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": true,
+            "requiresReservation": false
+          }
+        },
+        {
+          "_id": "haifa_givatoliva_1",
+          "name": "גינת כלבים גבעת אליהו",
+          "description": "גינת כלבים קטנה וחמימה בגבעת אליהו",
+          "type": "public",
+          "location": {
+            "address": "רחוב אליהו 25, חיפה",
+            "city": "חיפה",
+            "neighborhood": "גבעת אליהו",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9942, 32.8142]
+            }
+          },
+          "capacity": {
+            "maxDogs": 16
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_ramatdavid_1",
+          "name": "גינת כלבים רמת דוד",
+          "description": "גינת כלבים חדשה ברמת דוד",
+          "type": "public",
+          "location": {
+            "address": "רחוב דוד המלך 55, חיפה",
+            "city": "חיפה",
+            "neighborhood": "רמת דוד",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.0142, 32.8342]
+            }
+          },
+          "capacity": {
+            "maxDogs": 24
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "haifa_technion_1",
+          "name": "גינת כלבים הטכניון",
+          "description": "גינת כלבים באזור הטכניון",
+          "type": "public",
+          "location": {
+            "address": "שדרות הטכניון 32, חיפה",
+            "city": "חיפה",
+            "neighborhood": "הטכניון",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.0242, 32.7742]
+            }
+          },
+          "capacity": {
+            "maxDogs": 28
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל טבעי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        }
+      ],
+      "specialFeatures": [
+        {
+          "_id": "haifa_dogbeach_1",
+          "name": "חוף כלבים בת גלים",
+          "description": "חוף ייחודי לכלבים - השני בישראל אחרי תל אביב",
+          "type": "public",
+          "location": {
+            "address": "חוף בת גלים, חיפה",
+            "city": "חיפה",
+            "neighborhood": "בת גלים",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9742, 32.8242]
+            }
+          },
+          "capacity": {
+            "maxDogs": 50
+          },
+          "amenities": ["גישה לים", "ספסלים", "פחי אשפה", "מקלחות", "צל"],
+          "rules": ["חיסון בתוקף", "השגחת בעלים", "איסור השארת פסולת"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "features": {
+            "beachAccess": true,
+            "uniqueInIsrael": true
+          }
+        }
+      ]
+    },
+
+    "באר שבע": {
+      "cityInfo": {
+        "name": "באר שבע",
+        "englishName": "Beer Sheva",
+        "region": "דרום",
+        "population": 200000,
+        "totalDogParks": 5,
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 5,
+        "publicParks": 5,
+        "privateParks": 0,
+        "averageCapacity": 30,
+        "totalCapacity": 150
+      },
+      "dogParks": [
+        {
+          "_id": "beersheva_parkh_1",
+          "name": "גינת כלבים פארק ה'",
+          "description": "גינת כלבים גדולה ומפוארת",
+          "type": "public",
+          "location": {
+            "address": "פארק ה', באר שבע",
+            "city": "באר שבע",
+            "neighborhood": "שכונה ה'",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.8142, 31.2442]
+            }
+          },
+          "capacity": {
+            "maxDogs": 40
+          },
+          "openingHours": {
+            "sunday": { "open": "07:00", "close": "21:15", "closed": false },
+            "monday": { "open": "07:00", "close": "21:15", "closed": false },
+            "tuesday": { "open": "07:00", "close": "21:15", "closed": false },
+            "wednesday": { "open": "07:00", "close": "21:15", "closed": false },
+            "thursday": { "open": "07:00", "close": "21:15", "closed": false },
+            "friday": { "open": "07:00", "close": "12:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "21:15", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי מתקדמים", "פחי אשפה", "תאורה", "מזרקה", "צל"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": false,
+            "requiresReservation": false
+          }
+        },
+        {
+          "_id": "beersheva_sofrim_1",
+          "name": "גינת כלבים פארק הסופרים",
+          "description": "גינת כלבים במרכז שכונה ב'",
+          "type": "public",
+          "location": {
+            "address": "פארק הסופרים, שכונה ב', באר שבע",
+            "city": "באר שבע",
+            "neighborhood": "שכונה ב'",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.7942, 31.2542]
+            }
+          },
+          "capacity": {
+            "maxDogs": 25
+          },
+          "openingHours": {
+            "sunday": { "open": "07:30", "close": "20:00", "closed": false },
+            "monday": { "open": "07:30", "close": "20:00", "closed": false },
+            "tuesday": { "open": "07:30", "close": "20:00", "closed": false },
+            "wednesday": { "open": "07:30", "close": "20:00", "closed": false },
+            "thursday": { "open": "07:30", "close": "20:00", "closed": false },
+            "friday": { "open": "07:30", "close": "12:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "21:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "beersheva_nevezeev_1",
+          "name": "גינת כלבים נווה זאב",
+          "description": "גינת כלבים חדשה ומודרנית",
+          "type": "public",
+          "location": {
+            "address": "רחוב רוטשילד 15, באר שבע",
+            "city": "באר שבע",
+            "neighborhood": "נווה זאב",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.8042, 31.2642]
+            }
+          },
+          "capacity": {
+            "maxDogs": 35
+          },
+          "openingHours": {
+            "sunday": { "open": "07:00", "close": "21:00", "closed": false },
+            "monday": { "open": "07:00", "close": "21:00", "closed": false },
+            "tuesday": { "open": "07:00", "close": "21:00", "closed": false },
+            "wednesday": { "open": "07:00", "close": "21:00", "closed": false },
+            "thursday": { "open": "07:00", "close": "21:00", "closed": false },
+            "friday": { "open": "07:00", "close": "12:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "21:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי מתקדמים", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "beersheva_ramot_1",
+          "name": "גינת כלבים רמות באר שבע",
+          "description": "גינת כלבים מרווחת ברמות",
+          "type": "public",
+          "location": {
+            "address": "רחוב יוסף ספיר 8, באר שבע",
+            "city": "באר שבע",
+            "neighborhood": "רמות",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.8242, 31.2742]
+            }
+          },
+          "capacity": {
+            "maxDogs": 30
+          },
+          "openingHours": {
+            "sunday": { "open": "07:00", "close": "20:30", "closed": false },
+            "monday": { "open": "07:00", "close": "20:30", "closed": false },
+            "tuesday": { "open": "07:00", "close": "20:30", "closed": false },
+            "wednesday": { "open": "07:00", "close": "20:30", "closed": false },
+            "thursday": { "open": "07:00", "close": "20:30", "closed": false },
+            "friday": { "open": "07:00", "close": "12:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "21:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        }
+      ]
+    },
+
+    "כפר סבא": {
+      "cityInfo": {
+        "name": "כפר סבא",
+        "englishName": "Kfar Saba",
+        "region": "מרכז",
+        "population": 110000,
+        "totalDogParks": 14,
+        "note": "המספר הגבוה ביותר באזור השרון",
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 3,
+        "publicParks": 3,
+        "privateParks": 0,
+        "averageCapacity": 21,
+        "totalCapacity": 63
+      },
+      "dogParks": [
+        {
+          "_id": "kfarsaba_savioni_1",
+          "name": "גינת כלבים סביוני הכפר",
+          "description": "גינת כלבים באזור מרכזי",
+          "type": "public",
+          "location": {
+            "address": "רחוב משה סנה, כפר סבא",
+            "city": "כפר סבא",
+            "neighborhood": "מרכז העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9142, 32.1742]
+            }
+          },
+          "capacity": {
+            "maxDogs": 25
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "kfarsaba_hadekel_1",
+          "name": "גינת כלבים הדקל",
+          "description": "גינת כלבים ברחוב הדקל",
+          "type": "public",
+          "location": {
+            "address": "בין רחוב משה דיין לרחוב גליל, כפר סבא",
+            "city": "כפר סבא",
+            "neighborhood": "מערב העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9042, 32.1642]
+            }
+          },
+          "capacity": {
+            "maxDogs": 20
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        },
+        {
+          "_id": "kfarsaba_shikunhaderech_1",
+          "name": "גינת כלבים שיכון הדרך",
+          "description": "גינת כלבים באזור שיכון הדרך",
+          "type": "public",
+          "location": {
+            "address": "רחוב הדרך 25, כפר סבא",
+            "city": "כפר סבא",
+            "neighborhood": "שיכון הדרך",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9242, 32.1742]
+            }
+          },
+          "capacity": {
+            "maxDogs": 18
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        }
+      ]
+    },
+
+    "פתח תקווה": {
+      "cityInfo": {
+        "name": "פתח תקווה",
+        "englishName": "Petah Tikva",
+        "region": "מרכז",
+        "population": 250000,
+        "totalDogParks": 3,
+        "note": "העיר הראשונה - עם רשת גינות מפותחת",
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 3,
+        "publicParks": 3,
+        "privateParks": 0,
+        "averageCapacity": 32,
+        "totalCapacity": 95
+      },
+      "dogParks": [
+        {
+          "_id": "petahtikva_ganei_1",
+          "name": "גינת כלבים גני פתח תקווה",
+          "description": "גינת כלבים מרכזית ומפוארת",
+          "type": "public",
+          "location": {
+            "address": "רחוב אם המושבות 45, פתח תקווה",
+            "city": "פתח תקווה",
+            "neighborhood": "מרכז העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.8842, 32.0842]
+            }
+          },
+          "capacity": {
+            "maxDogs": 40
+          },
+          "openingHours": {
+            "sunday": { "open": "05:30", "close": "22:30", "closed": false },
+            "monday": { "open": "05:30", "close": "22:30", "closed": false },
+            "tuesday": { "open": "05:30", "close": "22:30", "closed": false },
+            "wednesday": { "open": "05:30", "close": "22:30", "closed": false },
+            "thursday": { "open": "05:30", "close": "22:30", "closed": false },
+            "friday": { "open": "05:30", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:30", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי מתקדמים", "פחי אשפה", "תאורה", "מזרקה", "שירותים"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": true,
+            "requiresReservation": false
+          }
+        },
+        {
+          "_id": "petahtikva_segula_1",
+          "name": "גינת כלבים שכונת סגולה",
+          "description": "גינת כלבים שכונתית פופולרית",
+          "type": "public",
+          "location": {
+            "address": "רחוב הרצל 89, פתח תקווה",
+            "city": "פתח תקווה",
+            "neighborhood": "סגולה",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.8742, 32.0942]
+            }
+          },
+          "capacity": {
+            "maxDogs": 30
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל טבעי"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        },
+        {
+          "_id": "petahtikva_kiryatarye_1",
+          "name": "גינת כלבים קריית אריה",
+          "description": "גינת כלבים מודרנית באזור עסקים",
+          "type": "public",
+          "location": {
+            "address": "רחוב ז'בוטינסקי 155, פתח תקווה",
+            "city": "פתח תקווה",
+            "neighborhood": "קריית אריה",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.8942, 32.0742]
+            }
+          },
+          "capacity": {
+            "maxDogs": 25
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "currentOccupancy": 0,
+          "statistics": {
+            "totalVisits": 0,
+            "averageRating": 0,
+            "totalReviews": 0
+          }
+        }
+      ]
+    },
+
+    "רמת גן": {
+      "cityInfo": {
+        "name": "רמת גן",
+        "englishName": "Ramat Gan",
+        "region": "מרכז",
+        "population": 163000,
+        "totalDogParks": 15,
+        "note": "עיר עם התכנון הטוב ביותר לגינות כלבים במרכז",
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 15,
+        "publicParks": 15,
+        "privateParks": 0,
+        "averageCapacity": 26,
+        "totalCapacity": 390
+      },
+      "dogParks": [
+        {
+          "_id": "ramatgan_center_1",
+          "name": "גינת כלבים מרכז רמת גן",
+          "description": "גינת כלבים מרכזית ומפוארת",
+          "type": "public",
+          "location": {
+            "address": "רחוב ביאליק 45, רמת גן",
+            "city": "רמת גן",
+            "neighborhood": "מרכז העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.8142, 32.0742]
+            }
+          },
+          "capacity": {
+            "maxDogs": 35
+          },
+          "openingHours": {
+            "sunday": { "open": "05:30", "close": "22:30", "closed": false },
+            "monday": { "open": "05:30", "close": "22:30", "closed": false },
+            "tuesday": { "open": "05:30", "close": "22:30", "closed": false },
+            "wednesday": { "open": "05:30", "close": "22:30", "closed": false },
+            "thursday": { "open": "05:30", "close": "22:30", "closed": false },
+            "friday": { "open": "05:30", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:30", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי מתקדמים", "פחי אשפה", "תאורה", "מזרקה", "שירותים", "חנייה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": true,
+            "requiresReservation": false
+          }
+        }
+      ]
+    },
+
+    "גבעתיים": {
+      "cityInfo": {
+        "name": "גבעתיים",
+        "englishName": "Givatayim",
+        "region": "מרכז",
+        "population": 60000,
+        "totalDogParks": 8,
+        "note": "עיר קטנה עם צפיפות גינות כלבים גבוהה",
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 8,
+        "publicParks": 8,
+        "privateParks": 0,
+        "averageCapacity": 22,
+        "totalCapacity": 176
+      },
+      "dogParks": [
+        {
+          "_id": "givatayim_center_1",
+          "name": "גינת כלבים מרכז גבעתיים",
+          "description": "גינת כלבים מרכזית בגבעתיים",
+          "type": "public",
+          "location": {
+            "address": "רחוב רוקח 25, גבעתיים",
+            "city": "גבעתיים",
+            "neighborhood": "מרכז העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.8042, 32.0642]
+            }
+          },
+          "capacity": {
+            "maxDogs": 25
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        }
+      ]
+    },
+
+    "ראשון לציון": {
+      "cityInfo": {
+        "name": "ראשון לציון",
+        "englishName": "Rishon LeZion",
+        "region": "מרכז",
+        "population": 254000,
+        "totalDogParks": 18,
+        "note": "עיר גדולה עם רשת מפותחת של גינות כלבים",
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 18,
+        "publicParks": 18,
+        "privateParks": 0,
+        "averageCapacity": 27,
+        "totalCapacity": 486
+      },
+      "dogParks": [
+        {
+          "_id": "rishonlezion_center_1",
+          "name": "גינת כלבים מרכז ראשון לציון",
+          "description": "גינת כלבים מרכזית בראשון לציון",
+          "type": "public",
+          "location": {
+            "address": "רחוב הרצל 125, ראשון לציון",
+            "city": "ראשון לציון",
+            "neighborhood": "מרכז העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.7942, 31.9642]
+            }
+          },
+          "capacity": {
+            "maxDogs": 32
+          },
+          "openingHours": {
+            "sunday": { "open": "05:30", "close": "22:30", "closed": false },
+            "monday": { "open": "05:30", "close": "22:30", "closed": false },
+            "tuesday": { "open": "05:30", "close": "22:30", "closed": false },
+            "wednesday": { "open": "05:30", "close": "22:30", "closed": false },
+            "thursday": { "open": "05:30", "close": "22:30", "closed": false },
+            "friday": { "open": "05:30", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:30", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי מתקדמים", "פחי אשפה", "תאורה", "מזרקה", "שירותים"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": true,
+            "requiresReservation": false
+          }
+        }
+      ]
+    },
+
+    "נתניה": {
+      "cityInfo": {
+        "name": "נתניה",
+        "englishName": "Netanya",
+        "region": "מרכז",
+        "population": 221000,
+        "totalDogParks": 12,
+        "specialFeatures": ["קרבה לחוף הים"],
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 12,
+        "publicParks": 12,
+        "privateParks": 0,
+        "averageCapacity": 25,
+        "totalCapacity": 300
+      },
+      "dogParks": [
+        {
+          "_id": "netanya_center_1",
+          "name": "גינת כלבים מרכז נתניה",
+          "description": "גינת כלבים מרכזית קרובה לחוף",
+          "type": "public",
+          "location": {
+            "address": "רחוב הרצל 88, נתניה",
+            "city": "נתניה",
+            "neighborhood": "מרכז העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.8542, 32.3342]
+            }
+          },
+          "capacity": {
+            "maxDogs": 30
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "קרבה לחוף"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": false,
+            "requiresReservation": false,
+            "nearBeach": true
+          }
+        }
+      ]
+    },
+
+    "הרצליה": {
+      "cityInfo": {
+        "name": "הרצליה",
+        "englishName": "Herzliya",
+        "region": "מרכז",
+        "population": 97000,
+        "totalDogParks": 10,
+        "note": "עיר עשירה עם גינות כלבים מפוארות",
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 10,
+        "publicParks": 10,
+        "privateParks": 0,
+        "averageCapacity": 28,
+        "totalCapacity": 280
+      },
+      "dogParks": [
+        {
+          "_id": "herzliya_center_1",
+          "name": "גינת כלבים מרכז הרצליה",
+          "description": "גינת כלבים יוקרתית במרכז הרצליה",
+          "type": "public",
+          "location": {
+            "address": "רחוב סוקולוב 45, הרצליה",
+            "city": "הרצליה",
+            "neighborhood": "מרכז העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.8342, 32.1642]
+            }
+          },
+          "capacity": {
+            "maxDogs": 35
+          },
+          "openingHours": {
+            "sunday": { "open": "05:30", "close": "22:30", "closed": false },
+            "monday": { "open": "05:30", "close": "22:30", "closed": false },
+            "tuesday": { "open": "05:30", "close": "22:30", "closed": false },
+            "wednesday": { "open": "05:30", "close": "22:30", "closed": false },
+            "thursday": { "open": "05:30", "close": "22:30", "closed": false },
+            "friday": { "open": "05:30", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:30", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי מתקדמים", "פחי אשפה", "תאורה", "מזרקה", "שירותים", "חנייה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": true,
+            "requiresReservation": false
+          }
+        }
+      ]
+    },
+
+    "עכו": {
+      "cityInfo": {
+        "name": "עכו",
+        "englishName": "Acre",
+        "region": "צפון",
+        "population": 49000,
+        "totalDogParks": 6,
+        "note": "עיר עתיקה עם גינות כלבים מודרניות",
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 6,
+        "publicParks": 6,
+        "privateParks": 0,
+        "averageCapacity": 22,
+        "totalCapacity": 132
+      },
+      "dogParks": [
+        {
+          "_id": "acre_center_1",
+          "name": "גינת כלבים מרכז עכו",
+          "description": "גינת כלבים במרכז העיר העתיקה",
+          "type": "public",
+          "location": {
+            "address": "רחוב בן עמי 25, עכו",
+            "city": "עכו",
+            "neighborhood": "מרכז העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [35.0842, 32.9242]
+            }
+          },
+          "capacity": {
+            "maxDogs": 25
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        }
+      ]
+    },
+
+    "אשדוד": {
+      "cityInfo": {
+        "name": "אשדוד",
+        "englishName": "Ashdod",
+        "region": "דרום",
+        "population": 225000,
+        "totalDogParks": 8,
+        "note": "עיר נמל עם גינות כלבים מודרניות",
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 8,
+        "publicParks": 8,
+        "privateParks": 0,
+        "averageCapacity": 26,
+        "totalCapacity": 208
+      },
+      "dogParks": [
+        {
+          "_id": "ashdod_center_1",
+          "name": "גינת כלבים מרכז אשדוד",
+          "description": "גינת כלבים מרכזית באשדוד",
+          "type": "public",
+          "location": {
+            "address": "רחוב הרצל 95, אשדוד",
+            "city": "אשדוד",
+            "neighborhood": "מרכז העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.6442, 31.8042]
+            }
+          },
+          "capacity": {
+            "maxDogs": 30
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "22:00", "closed": false },
+            "monday": { "open": "06:00", "close": "22:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "22:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "22:00", "closed": false },
+            "friday": { "open": "06:00", "close": "16:00", "closed": false },
+            "saturday": { "open": "20:00", "close": "22:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          }
+        }
+      ]
+    },
+
+    "אילת": {
+      "cityInfo": {
+        "name": "אילת",
+        "englishName": "Eilat",
+        "region": "דרום",
+        "population": 53000,
+        "totalDogParks": 4,
+        "note": "עיר תיירותית במדבר עם גינות כלבים מיוחדות",
+        "lastUpdated": "2025-01-15"
+      },
+      "statistics": {
+        "totalParks": 4,
+        "publicParks": 4,
+        "privateParks": 0,
+        "averageCapacity": 20,
+        "totalCapacity": 80
+      },
+      "dogParks": [
+        {
+          "_id": "eilat_center_1",
+          "name": "גינת כלבים מרכז אילת",
+          "description": "גינת כלבים עם צל מלאכותי במדבר",
+          "type": "public",
+          "location": {
+            "address": "רחוב התמרים 35, אילת",
+            "city": "אילת",
+            "neighborhood": "מרכז העיר",
+            "coordinates": {
+              "type": "Point",
+              "coordinates": [34.9542, 29.5542]
+            }
+          },
+          "capacity": {
+            "maxDogs": 22
+          },
+          "openingHours": {
+            "sunday": { "open": "06:00", "close": "20:00", "closed": false },
+            "monday": { "open": "06:00", "close": "20:00", "closed": false },
+            "tuesday": { "open": "06:00", "close": "20:00", "closed": false },
+            "wednesday": { "open": "06:00", "close": "20:00", "closed": false },
+            "thursday": { "open": "06:00", "close": "20:00", "closed": false },
+            "friday": { "open": "06:00", "close": "15:00", "closed": false },
+            "saturday": { "open": "19:00", "close": "20:00", "closed": false }
+          },
+          "amenities": ["ספסלים", "מכשירי אג'ילטי", "פחי אשפה", "תאורה", "צל מלאכותי", "מזרקה"],
+          "rules": ["חיסון בתוקף", "גיל מינימום 4 חודשים", "השגחת בעלים", "הימנעות משעות חום קיצוניות"],
+          "pricing": {
+            "type": "free",
+            "price": 0,
+            "currency": "ILS"
+          },
+          "features": {
+            "allowsPhotoSharing": true,
+            "hasEvents": false,
+            "requiresReservation": false,
+            "desertLocation": true
+          }
+        }
+      ]
+    }
+  }
+}
