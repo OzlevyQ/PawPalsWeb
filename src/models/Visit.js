@@ -55,4 +55,12 @@ visitSchema.methods.checkout = function() {
   return this.save();
 };
 
+// Performance indexes - CRITICAL for query speed  
+visitSchema.index({ user: 1, garden: 1 }); // Most critical - queries by user and garden
+visitSchema.index({ garden: 1, checkInTime: -1 }); // Garden visits, newest first
+visitSchema.index({ garden: 1, status: 1 }); // Active visits by garden
+visitSchema.index({ user: 1, checkInTime: -1 }); // User's visits, newest first
+visitSchema.index({ status: 1 }); // Filter by status (active/completed)
+visitSchema.index({ checkInTime: -1 }); // Recent visits
+
 module.exports = mongoose.model('Visit', visitSchema);

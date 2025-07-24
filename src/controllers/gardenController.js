@@ -68,72 +68,119 @@ const getAllGardens = async (req, res) => {
 
     // Add current occupancy data for each garden
     const Visit = require('../models/Visit');
-    const gardensWithOccupancy = await Promise.all(
-      gardens.map(async (garden) => {
-        const activeVisitsCount = await Visit.countDocuments({
-          garden: garden._id,
-          status: 'active'
-        });
-        
-        // Get current visitors with dog images
-        const activeVisits = await Visit.find({
-          garden: garden._id,
-          status: 'active'
-        })
-          .populate({
-            path: 'user',
-            select: 'firstName lastName profileImage'
-          })
-          .populate({
-            path: 'dogs',
-            select: 'name breed size age profileVisibility owner image gallery'
-          })
-          .sort('-checkInTime')
-          .limit(10); // Limit to avoid too much data
-
-        // Filter dogs based on visibility settings
-        const visibleVisits = activeVisits.map(visit => {
-          const visitObj = visit.toObject();
-          visitObj.dogs = visitObj.dogs.filter(dog => 
-            dog.profileVisibility === 'public'
-          );
-          return visitObj;
-        }).filter(visit => visit.dogs.length > 0);
-
-        // Transform visits to currentVisitors format
-        const currentVisitors = [];
-        visibleVisits.forEach(visit => {
-          visit.dogs.forEach(dog => {
-            currentVisitors.push({
-              user: visit.user,
-              dog: dog,
-              checkInTime: visit.checkInTime
-            });
-          });
-        });
-        
-        const gardenObj = garden.toObject();
-        gardenObj.currentOccupancy = activeVisitsCount;
-        gardenObj.currentVisitors = currentVisitors;
-        
-        // Add distance calculation if coordinates were provided
-        if (lat && lng && garden.location?.coordinates?.coordinates) {
-          const [gardenLng, gardenLat] = garden.location.coordinates.coordinates;
-          if (gardenLat !== 0 || gardenLng !== 0) { // Skip invalid coordinates
-            const R = 6371; // Earth's radius in kilometers
-            const dLat = (gardenLat - parseFloat(lat)) * Math.PI / 180;
-            const dLng = (gardenLng - parseFloat(lng)) * Math.PI / 180;
-            const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-                     Math.cos(parseFloat(lat) * Math.PI / 180) * Math.cos(gardenLat * Math.PI / 180) *
-                     Math.sin(dLng/2) * Math.sin(dLng/2);
-            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-            gardenObj.distance = R * c; // Distance in kilometers
+    // PERFORMANCE FIX: Use aggregation to get all data in one query instead of N+1
+    const gardenIds = gardens.map(g => g._id);
+    
+    // Single aggregation query to get all visit data for all gardens
+    const visitsData = await Visit.aggregate([
+      {
+        $match: { 
+          garden: { $in: gardenIds }, 
+          status: 'active' 
+        }
+      },
+      {
+        $lookup: {
+          from: 'users',
+          localField: 'user',
+          foreignField: '_id',
+          as: 'user',
+          pipeline: [
+            { $project: { firstName: 1, lastName: 1, profileImage: 1 } }
+          ]
+        }
+      },
+      {
+        $lookup: {
+          from: 'dogs',
+          localField: 'dogs',
+          foreignField: '_id',
+          as: 'dogs',
+          pipeline: [
+            { 
+              $match: { profileVisibility: 'public' } 
+            },
+            { 
+              $project: { 
+                name: 1, breed: 1, size: 1, age: 1, 
+                profileVisibility: 1, owner: 1, image: 1, gallery: 1 
+              } 
+            }
+          ]
+        }
+      },
+      {
+        $group: {
+          _id: '$garden',
+          count: { $sum: 1 },
+          visits: { 
+            $push: {
+              _id: '$_id',
+              user: { $arrayElemAt: ['$user', 0] },
+              dogs: '$dogs',
+              checkInTime: '$checkInTime'
+            }
           }
         }
-        
-        return gardenObj;
-      })
+      },
+      {
+        $project: {
+          count: 1,
+          visits: {
+            $slice: [
+              { $sortArray: { input: '$visits', sortBy: { checkInTime: -1 } } },
+              10
+            ]
+          }
+        }
+      }
+    ]);
+
+    // Map the aggregated data back to gardens
+    const visitsMap = new Map(
+      visitsData.map(item => [item._id.toString(), item])
     );
+
+    const gardensWithOccupancy = gardens.map(garden => {
+      const visitData = visitsMap.get(garden._id.toString());
+      
+      // Transform visits to currentVisitors format
+      const currentVisitors = [];
+      if (visitData?.visits) {
+        visitData.visits.forEach(visit => {
+          if (visit.dogs && visit.dogs.length > 0) {
+            visit.dogs.forEach(dog => {
+              currentVisitors.push({
+                user: visit.user,
+                dog: dog,
+                checkInTime: visit.checkInTime
+              });
+            });
+          }
+        });
+      }
+
+      const gardenObj = garden.toObject();
+      gardenObj.currentOccupancy = visitData?.count || 0;
+      gardenObj.currentVisitors = currentVisitors;
+      
+      // Add distance calculation if coordinates were provided
+      if (lat && lng && garden.location?.coordinates?.coordinates) {
+        const [gardenLng, gardenLat] = garden.location.coordinates.coordinates;
+        if (gardenLat !== 0 || gardenLng !== 0) { // Skip invalid coordinates
+          const R = 6371; // Earth's radius in kilometers
+          const dLat = (gardenLat - parseFloat(lat)) * Math.PI / 180;
+          const dLng = (gardenLng - parseFloat(lng)) * Math.PI / 180;
+          const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                   Math.cos(parseFloat(lat) * Math.PI / 180) * Math.cos(gardenLat * Math.PI / 180) *
+                   Math.sin(dLng/2) * Math.sin(dLng/2);
+          const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+          gardenObj.distance = R * c; // Distance in kilometers
+        }
+      }
+      
+      return gardenObj;
+    });
 
     // If distance was requested, sort by distance and filter by max distance
     if (lat && lng && maxDistance) {

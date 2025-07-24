@@ -147,6 +147,131 @@ router.post('/badges/award', auth, async (req, res) => {
   }
 });
 
+// Get user's achievements
+router.get('/achievements', auth, async (req, res) => {
+  try {
+    // Fetch user's completed achievements
+    const User = require('../models/User');
+    const Achievement = require('../models/Achievement');
+    
+    const user = await User.findById(req.userId).lean();
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+    
+    // Get all achievements and mark which ones are completed
+    const allAchievements = await Achievement.find({}).lean();
+    const userAchievements = user.gamification?.achievements || [];
+    
+    const achievements = allAchievements.map(achievement => {
+      const userAchievement = userAchievements.find(ua => ua.achievementId?.toString() === achievement._id.toString());
+      return {
+        id: achievement._id,
+        name: achievement.name,
+        description: achievement.description,
+        icon: achievement.icon,
+        points: achievement.points,
+        type: achievement.type,
+        isCompleted: !!userAchievement,
+        completedAt: userAchievement?.earnedAt || null,
+        progress: {
+          current: userAchievement?.progress || 0,
+          target: achievement.target || 1
+        }
+      };
+    });
+    
+    res.json({ achievements });
+  } catch (error) {
+    console.error('Error fetching achievements:', error);
+    res.status(500).json({ error: 'Error fetching achievements' });
+  }
+});
+
+// Get user's recent activity
+router.get('/activity', auth, async (req, res) => {
+  try {
+    const { limit = 10 } = req.query;
+    const User = require('../models/User');
+    
+    const user = await User.findById(req.userId).lean();
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+    
+    // Get recent gamification activity
+    const recentActivity = [];
+    
+    // Add recent achievements
+    if (user.gamification?.achievements) {
+      const recentAchievements = user.gamification.achievements
+        .filter(a => a.earnedAt)
+        .sort((a, b) => new Date(b.earnedAt) - new Date(a.earnedAt))
+        .slice(0, 5)
+        .map(achievement => ({
+          id: achievement._id,
+          type: 'achievement',
+          title: 'Achievement Unlocked!',
+          description: achievement.name || 'Achievement earned',
+          icon: '🏆',
+          points: achievement.points || 0,
+          createdAt: achievement.earnedAt,
+          timeAgo: getTimeAgo(achievement.earnedAt)
+        }));
+      
+      recentActivity.push(...recentAchievements);
+    }
+    
+    // Add recent badges
+    if (user.gamification?.badges) {
+      const recentBadges = user.gamification.badges
+        .filter(b => b.earnedAt)
+        .sort((a, b) => new Date(b.earnedAt) - new Date(a.earnedAt))
+        .slice(0, 3)
+        .map(badge => ({
+          id: badge._id,
+          type: 'badge',
+          title: 'Badge Earned!',
+          description: badge.name || 'Badge earned',
+          icon: badge.icon || '🎖️',
+          points: badge.points || 0,
+          createdAt: badge.earnedAt,
+          timeAgo: getTimeAgo(badge.earnedAt)
+        }));
+      
+      recentActivity.push(...recentBadges);
+    }
+    
+    // Sort all activity by date and limit
+    const sortedActivity = recentActivity
+      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+      .slice(0, parseInt(limit));
+    
+    res.json({ activity: sortedActivity });
+  } catch (error) {
+    console.error('Error fetching recent activity:', error);
+    res.status(500).json({ error: 'Error fetching recent activity' });
+  }
+});
+
+// Helper function to calculate time ago
+function getTimeAgo(date) {
+  const now = new Date();
+  const past = new Date(date);
+  const diffInMinutes = Math.floor((now - past) / (1000 * 60));
+  
+  if (diffInMinutes < 1) return 'Just now';
+  if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
+  
+  const diffInHours = Math.floor(diffInMinutes / 60);
+  if (diffInHours < 24) return `${diffInHours}h ago`;
+  
+  const diffInDays = Math.floor(diffInHours / 24);
+  if (diffInDays < 7) return `${diffInDays}d ago`;
+  
+  return past.toLocaleDateString();
+}
+
 // Reset user's streak (admin only)
 router.post('/streak/reset', auth, async (req, res) => {
   try {

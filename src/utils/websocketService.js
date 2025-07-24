@@ -6,13 +6,22 @@ class WebSocketService {
   constructor() {
     this.wss = null;
     this.connections = new Map(); // userId -> WebSocket connection
+    this.MAX_CONNECTIONS = 1000; // Limit total connections
+    this.CONNECTION_TIMEOUT = 30 * 60 * 1000; // 30 minutes timeout
+    this.CLEANUP_INTERVAL = 5 * 60 * 1000; // Cleanup every 5 minutes
+    this.RECONNECT_LIMIT = 5; // Max reconnection attempts per user
+    this.userReconnectAttempts = new Map(); // Track reconnection attempts
   }
 
   initialize(server) {
     this.wss = new WebSocket.Server({ 
       server,
-      path: '/notifications-ws'
+      path: '/notifications-ws',
+      maxPayload: 16 * 1024 // 16KB max message size
     });
+    
+    // Start periodic cleanup
+    setInterval(() => this.cleanupConnections(), this.CLEANUP_INTERVAL);
 
     this.wss.on('connection', async (ws, req) => {
       try {
@@ -35,9 +44,26 @@ class WebSocketService {
           return;
         }
 
-        // Store connection
+        // Check connection limits
+        if (this.connections.size >= this.MAX_CONNECTIONS) {
+          ws.close(1008, 'Server at maximum capacity');
+          return;
+        }
+        
+        // Check if user already has a connection
+        const existingConnection = this.connections.get(user._id.toString());
+        if (existingConnection && existingConnection.readyState === WebSocket.OPEN) {
+          existingConnection.close(1000, 'New connection established');
+        }
+        
+        // Store connection with metadata
         ws.userId = user._id.toString();
+        ws.lastActivity = Date.now();
+        ws.connectionTime = Date.now();
         this.connections.set(ws.userId, ws);
+        
+        // Reset reconnect attempts on successful connection
+        this.userReconnectAttempts.delete(ws.userId);
 
         console.log(`WebSocket connected: User ${user.firstName} ${user.lastName} (${ws.userId})`);
 
@@ -61,7 +87,30 @@ class WebSocketService {
 
         // Handle ping/pong for connection keep-alive
         ws.on('ping', () => {
+          ws.lastActivity = Date.now();
           ws.pong();
+        });
+        
+        // Handle messages to update activity
+        ws.on('message', (data) => {
+          ws.lastActivity = Date.now();
+          // Handle any client messages here if needed
+        });
+        
+        // Start heartbeat
+        ws.isAlive = true;
+        const heartbeatInterval = setInterval(() => {
+          if (ws.isAlive === false) {
+            clearInterval(heartbeatInterval);
+            return ws.terminate();
+          }
+          ws.isAlive = false;
+          ws.ping();
+        }, 30000); // Ping every 30 seconds
+        
+        ws.on('pong', () => {
+          ws.isAlive = true;
+          ws.lastActivity = Date.now();
         });
 
       } catch (error) {
@@ -163,20 +212,72 @@ class WebSocketService {
     this.connections.clear();
   }
 
-  // Cleanup inactive connections
+  // Enhanced cleanup for inactive connections
   cleanupConnections() {
+    const now = Date.now();
     const toRemove = [];
+    let inactiveCount = 0;
+    let timeoutCount = 0;
+    
     this.connections.forEach((ws, userId) => {
       if (ws.readyState !== WebSocket.OPEN) {
         toRemove.push(userId);
+      } else if (ws.lastActivity && now - ws.lastActivity > this.CONNECTION_TIMEOUT) {
+        // Connection is too old, close it
+        ws.close(1000, 'Connection timeout');
+        toRemove.push(userId);
+        timeoutCount++;
+      } else if (!ws.lastActivity && now - ws.connectionTime > this.CONNECTION_TIMEOUT) {
+        // No activity recorded, use connection time
+        ws.close(1000, 'Connection timeout');
+        toRemove.push(userId);
+        inactiveCount++;
       }
     });
     
     toRemove.forEach(userId => {
       this.connections.delete(userId);
+      this.userReconnectAttempts.delete(userId); // Clean up reconnect attempts
     });
+    
+    if (toRemove.length > 0) {
+      console.log(`🧹 WebSocket cleanup: removed ${toRemove.length} connections (${timeoutCount} timeouts, ${inactiveCount} inactive)`);
+    }
 
     return toRemove.length;
+  }
+  
+  // Check if user can reconnect (prevent spam)
+  canUserReconnect(userId) {
+    const attempts = this.userReconnectAttempts.get(userId) || 0;
+    if (attempts >= this.RECONNECT_LIMIT) {
+      return false;
+    }
+    this.userReconnectAttempts.set(userId, attempts + 1);
+    return true;
+  }
+  
+  // Get connection statistics
+  getConnectionStats() {
+    const now = Date.now();
+    let activeConnections = 0;
+    let oldConnections = 0;
+    
+    this.connections.forEach((ws, userId) => {
+      if (ws.readyState === WebSocket.OPEN) {
+        activeConnections++;
+        if (now - ws.connectionTime > this.CONNECTION_TIMEOUT / 2) {
+          oldConnections++;
+        }
+      }
+    });
+    
+    return {
+      total: this.connections.size,
+      active: activeConnections,
+      old: oldConnections,
+      maxAllowed: this.MAX_CONNECTIONS
+    };
   }
 }
 

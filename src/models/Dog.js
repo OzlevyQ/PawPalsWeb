@@ -247,4 +247,11 @@ dogSchema.statics.getMostPopular = function(limit = 10) {
     .populate('owner', 'firstName lastName profileImage');
 };
 
+// Performance indexes - CRITICAL for query speed
+dogSchema.index({ owner: 1 }); // Most important - queries by owner
+dogSchema.index({ owner: 1, isActive: 1 }); // Compound index for active dogs by owner
+dogSchema.index({ breed: 1 }); // Search by breed
+dogSchema.index({ size: 1 }); // Filter by size
+dogSchema.index({ isActive: 1, createdAt: -1 }); // Active dogs, newest first
+
 module.exports = mongoose.model('Dog', dogSchema);

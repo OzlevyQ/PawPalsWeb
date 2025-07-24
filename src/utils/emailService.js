@@ -686,7 +686,7 @@ const sendRequestStatusUpdateEmail = async (user, request, status) => {
     `;
   }
   
-  zcontent += `<p>Thank you for your interest in contributing to our PawPals community!</p>`;
+  content += `<p>Thank you for your interest in contributing to our PawPals community!</p>`;
 
   const buttonText = isApproved ? 'Access Your Dashboard' : 'Back to Profile';
   const buttonUrl = isApproved 

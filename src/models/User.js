@@ -217,4 +217,12 @@ userSchema.methods.toJSON = function() {
   return user;
 };
 
+// Performance indexes - CRITICAL for query speed
+userSchema.index({ email: 1 }); // Login and user search
+userSchema.index({ role: 1 }); // Admin queries by role
+userSchema.index({ status: 1 }); // Active/inactive users
+userSchema.index({ role: 1, status: 1 }); // Compound index for admin user management  
+userSchema.index({ lastActive: -1 }); // Recent active users
+userSchema.index({ username: 1 }); // Username searches
+
 module.exports = mongoose.model('User', userSchema);

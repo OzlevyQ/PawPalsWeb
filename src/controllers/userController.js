@@ -162,15 +162,37 @@ const removeFavorite = async (req, res) => {
 
 const getFavorites = async (req, res) => {
   try {
-    const user = await User.findById(req.userId).populate('favorites');
+    // PERFORMANCE FIX: Add pagination to prevent loading thousands of favorites
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 20; // Default 20 favorites per page
+    const skip = (page - 1) * limit;
+
+    const user = await User.findById(req.userId).populate({
+      path: 'favorites',
+      options: { 
+        limit: limit,
+        skip: skip,
+        sort: { createdAt: -1 } // Newest first
+      },
+      select: 'name location image type isActive' // Only essential fields
+    });
     
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
 
+    // Get total count for pagination info
+    const totalFavorites = user.favorites ? user.favorites.length : 0;
+    
     res.json({
       message: 'Favorites retrieved successfully',
-      favorites: user.favorites
+      favorites: user.favorites,
+      pagination: {
+        page,
+        limit,
+        total: totalFavorites,
+        pages: Math.ceil(totalFavorites / limit)
+      }
     });
   } catch (error) {
     console.error('Error getting favorites:', error);

@@ -41,7 +41,7 @@ app.use(cors({
       'http://localhost:5000', // Allow same origin when serving frontend
       'http://localhost:5173',
       'https://your-domain.com',
-      'https://dog-parks-app.onrender.com'
+      'https://pawpals.yadbarzel.info'
     ];
     
     // Check if origin is in allowed list or is ngrok domain or Render domain
